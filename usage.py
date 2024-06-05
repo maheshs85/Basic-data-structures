@@ -3,6 +3,7 @@ from stack import Stack
 from my_queue import Queue
 from doubly_linked_list import DoublyLinkedList, Node
 from hash_table import HashTable
+from binary_search_tree import BinarySearchTree
 
 # Example usage of Array
 array = Array(5)
@@ -43,8 +44,29 @@ queue.enqueue(2)
 queue.enqueue(3)
 print("Queue:", queue.display(), "\n")
 
-# Example usage of HashTable
+# Example usage of Hash Table
 hash_table = HashTable(10)
 hash_table.insert('key1', 'value1')
 hash_table.insert('key2', 'value2')
-print("HashTable:", hash_table.display())
+print("HashTable:", hash_table.display(), "\n")
+
+# Example usage of Binary Search Tree
+bst = BinarySearchTree()
+bst.insert(50)
+bst.insert(30)
+bst.insert(70)
+bst.insert(20)
+bst.insert(40)
+bst.insert(60)
+bst.insert(80)
+
+print("BST Inorder traversal:", bst.inorder_traversal())
+
+bst.delete(20)
+print("After deleting 20:", bst.inorder_traversal())
+
+bst.delete(30)
+print("After deleting 30:", bst.inorder_traversal())
+
+bst.delete(50)
+print("After deleting 50:", bst.inorder_traversal())
